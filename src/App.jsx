@@ -18,9 +18,9 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (history.length > 0) {
+   
       localStorage.setItem("weatherHistory", JSON.stringify(history));
-    }
+    
   }, [history]);
 
   return (
