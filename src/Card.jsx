@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import CardDetails from "./CardDetails";
+import { useStateContext } from "./context/StateContext";
 
 import Button from "./Button";
 
-const Card = ({ location, removeLocation }) => {
+const Card = ({ location }) => {
+  const { removeLocation } = useStateContext();
   const [selectedRange, setSelectedRange] = useState(0);
 
   useEffect(() => {

@@ -1,11 +1,9 @@
 import Button from "./Button";
+import { useStateContext } from "./context/StateContext";
+const History = () => {
+  const { locations, history, fetchLocations, handleClearHistory } =
+    useStateContext();
 
-const History = ({
-  history,
-  fetchLocations,
-  locations,
-  handleClearHistory,
-}) => {
   const handleAddFromHistory = (city) => {
     if (
       !locations.some(
